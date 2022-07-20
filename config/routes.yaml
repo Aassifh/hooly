@@ -1,3 +1,27 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+app_hooly:
+  path: /hooly
+  controller: App\Controller\HoolyController:index
+  methods:    GET
+
+app_hooly_info:
+  path: /hooly/info
+  controller: App\Controller\HoolyController:info
+  methods:    GET
+
+app_hooly_parking:
+  path: /hooly/parking
+  controller: App\Controller\HoolyController:availablePlaces
+  methods: GET
+
+app_hooly_booking:
+  path: /hooly/book
+  controller: App\Controller\HoolyController:bookParking
+  methods: POST
+
+app_hooly_register:
+  path: /hooly/register/truck/{description}
+  controller: App\Controller\HoolyController:registerTruck
+  methods: GET
